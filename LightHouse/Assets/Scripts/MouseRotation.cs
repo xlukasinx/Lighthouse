@@ -23,8 +23,8 @@ public class MouseRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-          edge = (Screen.width / 100) * 5;
-          edge2 = (Screen.width / 100) * 95;
+       //   edge = (Screen.width / 100) * 5;
+        //  edge2 = (Screen.width / 100) * 95;
 
       // Debug.Log("Screen Width : " + Screen.width);
       
@@ -35,12 +35,12 @@ public class MouseRotation : MonoBehaviour
       }
      
        
-        if( /*Input.GetAxis("Mouse X") < 0 && */ Input.mousePosition.x < edge) {
+        if( /*Input.GetAxis("Mouse X") < 0 && */ Input.mousePosition.x == 0) {
           
             camera.transform.RotateAround(lighthouse.transform.position, Vector3.up, 50 * Time.deltaTime);
 
         }
-        if( /*Input.GetAxis("Mouse X")>0 && */ Input.mousePosition.x > edge2){
+        if( /*Input.GetAxis("Mouse X")>0 && */ Input.mousePosition.x == Screen.width - 1){
    
         
          camera.transform.RotateAround(lighthouse.transform.position, Vector3.up, -50 * Time.deltaTime);
