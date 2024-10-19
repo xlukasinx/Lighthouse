@@ -362,7 +362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e78f47eefdc5db46b64afd19caac3c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 963194225}
+  camera: {fileID: 963194227}
   lighthouse: {fileID: 627697783}
 --- !u!1 &705507993
 GameObject:
