@@ -7,9 +7,11 @@ public class Enemy : MonoBehaviour
    public bool over = true;
 
    public GameObject enemy;
-   public GameObject lightHouse;
 
-   public float speed = 50f;
+     
+   
+
+  
    
 
     // Start is called before the first frame update
@@ -26,27 +28,14 @@ public class Enemy : MonoBehaviour
      
     }
 
-      void OnCollisionEnter(Collision collision)
-     {
-       over = false;
-         Debug.Log("Game over!!");
-     }
+      
 
     public IEnumerator EnemyMovement()
     {
+            GameObject newOne;  
         while(over )
         {
-             GameObject newOne =  Instantiate(enemy, new Vector3(Random.Range(1,12), 0, Random.Range(1,12)), Quaternion.identity);
-
-             
-                  var step =  speed * Time.deltaTime; // calculate distance to move
-
-
-          if (Vector3.Distance(newOne.transform.position, lightHouse.transform.position) < 0.001f)
-            {
-                newOne.transform.position = Vector3.MoveTowards(newOne.transform.position, lightHouse.transform.position, step);
-            }
-            
+              newOne =  Instantiate(enemy, new Vector3(Random.Range(450,550), 0, Random.Range(450,550)), Quaternion.identity);            
               yield return new WaitForSeconds(10f);
             
         }
