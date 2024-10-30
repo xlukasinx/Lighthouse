@@ -37,12 +37,22 @@ public class Light : MonoBehaviour
          // float angle = Mathf.Atan2(look.x,look.y) * Mathf.Rad2Deg - 90;
           // beam.transform.LookAt(hitData.point,  Vector3.up);
 
-        Vector3 data = hitData.point;
-      
-        transform.LookAt(hitData.point);
+            Vector3 data = hitData.point;
+
+            if(data.x > 500 ||data.z > 500)
+            {
+               transform.LookAt(hitData.point);
 
           beam.transform.LookAt(hitData.point);
           beam.transform.Rotate(0,180,0);
+
+            }
+
+             
+         
+      
+      
+        
        
       
      
